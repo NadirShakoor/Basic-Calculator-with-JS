@@ -1,0 +1,116 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* Light background color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    flex-direction: column; /* Stack the marquee above the calculator */
+}
+
+/* Styling for the marquee */
+marquee {
+    font-size: 20px;
+    color: black; /* White text color */
+    text-align: center; /* Center the text */
+    margin-bottom: 10px; /* Space between marquee and calculator */
+}
+
+/* Styling for the calculator container */
+.calculator {
+    width: 280px; /* Increase width for better spacing */
+    padding: 20px;
+    border: 2px solid #444; /* Darker border */
+    border-radius: 10px;
+    text-align: center;
+    background-color: #fff; /* White background */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Styling for the input field */
+.calculator input {
+    width: 92%; /* Make the input field take full width */
+    height: 30px; /* Increase height for better visibility */
+    font-size: 24px; /* Larger font size for better readability */
+    text-align: right; /* Right-align the input */
+    border: 2px solid #ccc; /* Light border color */
+    border-radius: 5px;
+    margin-bottom: 15px; /* Add space below the input field */
+    padding: 10px;
+    background-color: #fafafa; /* Light gray background */
+}
+
+/* Styling for buttons */
+.calculator button {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    margin: 8px;
+    cursor: pointer;
+    background-color: #f1f1f1; /* Light gray button background */
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+/* Hover effect for buttons */
+.calculator button:hover {
+    background-color: #dcdcdc; /* Darker gray on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Active state when a button is clicked */
+.calculator button:active {
+    background-color: #bbb; /* Even darker gray when pressed */
+    transform: scale(1); /* Button returns to normal size */
+}
+
+/* Special styling for operators and equal button */
+.calculator button:nth-child(4),
+.calculator button:nth-child(8),
+.calculator button:nth-child(12),
+.calculator button:nth-child(16) {
+    background-color: #ff9800; /* Orange color for operators */
+    color: white;
+}
+
+/* Special styling for the clear button */
+.calculator button:nth-child(13) {
+    background-color: #f44336; /* Red color for 'C' button */
+    color: white;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+    .calculator {
+        width: 100%; /* Full width for small screens */
+        max-width: 300px; /* Limit the max width */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .calculator input {
+        height: 30px; /* Adjust input field height */
+        font-size: 20px; /* Reduce font size */
+    }
+
+    .calculator button {
+        width: 45px; /* Adjust button width */
+        height: 45px; /* Adjust button height */
+        font-size: 20px; /* Adjust font size */
+        margin: 6px; /* Adjust margin for smaller screen */
+    }
+}
+
+/* Add some padding to the sides for larger screens */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .calculator {
+        width: 250px; /* Medium size for tablets */
+    }
+}
